@@ -1,0 +1,131 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #ffffff;
+    color: #333;
+    line-height: 1.6;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Header */
+#header {
+    background: #222; color: #fff; padding: 20px;
+    display: flex; justify-content: space-between; align-items: center;
+}
+#logo h1 { font-size: 24px; }
+#logo .blue { color: #00aaff; }
+#menu { display: flex; }
+#menu a {
+    color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold;
+    transition: color 0.3s ease;
+}
+#menu a:hover { color: #00aaff; }
+
+#content { max-width: 1000px; margin: 40px auto; padding: 20px; text-align: center; }
+
+/* Foto de perfil centralizada */
+.foto-perfil {
+    width: 300px; 
+    border-radius: 10%; 
+    display: block;
+    margin: 20px auto;
+    transition: transform 0.3s ease;
+}
+.foto-perfil:hover { transform: scale(1.05); }
+
+/* Botão "Saiba mais sobre mim" */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #00aaff;
+    color: white !important; /* mater branco mesmo no hover */ 
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+.btn:hover {
+    background: #0077aa;
+    transform: translateY(-2px);
+    color: #fff !important; /* mantém branco mesmo no hover */
+}
+
+/* Projetos centralizados */
+.projetos-container {
+    display: flex; 
+    justify-content: center; 
+    gap: 30px;
+    flex-wrap: wrap; 
+    margin-top: 30px;
+}
+.projeto {
+    background: #fff; 
+    padding: 20px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center; 
+    width: 300px;
+}
+.projeto img {
+    width: 100%; 
+    border-radius: 8px; 
+    margin-bottom: 15px;
+}
+
+/* Formulário */
+form { display: flex; 
+    flex-direction: column; 
+    gap: 15px; }
+form label { 
+    font-weight: bold;
+    text-align: left; }
+form input, form textarea {
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 6px; 
+    font-size: 14px; 
+    width: 100%;
+}
+form button {
+    padding: 12px; 
+    background: #00aaff; 
+    color: #fff; 
+    border: none;
+    border-radius: 6px; 
+    font-weight: bold; 
+    cursor: pointer;
+}
+form button:hover {
+    background: #0077aa; 
+}
+
+/* Posiciona os icones do GitHub e do Linkedin na esquerda */
+#social {
+    margin-left: auto; 
+}
+#social a {
+    padding: 4px;
+    color: #000000;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+#social a:hover {
+    color: #00aaff;
+}
+#social {
+    margin-left: auto; /* joga para direita */
+    display: flex;
+    gap: 15px;
+}
+#social a {
+    color: #0077aa;
+    font-size: 30px;
+    transition: color 0.3s ease;
+}
+#social a:hover {
+    color: #0324dfc6;
+}
