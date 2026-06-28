@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diego Pereira</title>
+    <title>Contato - Diego Pereira</title>
     <link rel="stylesheet" href="css/Portfólio.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="Script.js" defer></script>
@@ -19,17 +19,22 @@
         </div>
     </div>
 
-    <div id="social">
-        <a href="https://github.com/DiegoViniciusMP" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/diego-pereira-225928180/" target="_blank"><i class="fab fa-linkedin"></i></a>
-    </div>
-
     <div id="content">
-        <h1>Bem-vindo ao meu portfólio!</h1>
-        <span>Aqui você encontrará informações sobre meus projetos, habilidades e experiências profissionais.</span>
-        <img src="img/Diego_Pereira.jpg" alt="Foto de Diego Pereira" class="foto-perfil">
-        <p>Olá! Meu nome é Diego Pereira e sou um desenvolvedor apaixonado por tecnologia e inovação.</p>
-        <a href="Sobre.html" class="btn">Saiba mais sobre mim</a>
+        <h1>Entre em contato</h1>
+        <p>Preencha o formulário abaixo e fale comigo:</p>
+
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu email">
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem"></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
     </div>
 </body>
 </html>
