@@ -1,30 +1,70 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+/* Aqui eu deixo algumas cores prontas pra usar no site inteiro */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333;
+    --header-bg: #222;
+    --header-text: #fff;
+    --card-bg: #fff;
+    --border-color: #ccc;
+    --accent-color: #00aaff;
+    --accent-hover: #0077aa;
+}
+
+body.dark-theme {
+    --bg-color: #111827;
+    --text-color: #f3f4f6;
+    --header-bg: #1f2937;
+    --header-text: #f9fafb;
+    --card-bg: #1f2937;
+    --border-color: #4b5563;
+    --accent-color: #38bdf8;
+    --accent-hover: #0ea5e9;
+}
+
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: #ffffff;
-    color: #333;
+    background: var(--bg-color);
+    color: var(--text-color);
     line-height: 1.6;
     transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Header */
+/* Cabeçalho do site, com menu e botão de tema claro e escuro */
 #header {
-    background: #222; color: #fff; padding: 20px;
+    background: var(--header-bg); color: var(--header-text); padding: 20px;
     display: flex; justify-content: space-between; align-items: center;
 }
+#header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
 #logo h1 { font-size: 24px; }
-#logo .blue { color: #00aaff; }
+#logo .blue { color: var(--accent-color); }
 #menu { display: flex; }
 #menu a {
-    color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold;
+    color: var(--header-text); margin: 0 15px; text-decoration: none; font-weight: bold;
     transition: color 0.3s ease;
 }
-#menu a:hover { color: #00aaff; }
+#menu a:hover { color: var(--accent-color); }
+#theme-toggle {
+    background: transparent;
+    border: 1px solid var(--header-text);
+    color: var(--header-text);
+    border-radius: 999px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+#theme-toggle:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
 
 #content { max-width: 1000px; margin: 40px auto; padding: 20px; text-align: center; }
 
-/* Foto de perfil centralizada */
+/* Foto de perfil centralizada, pra ficar padronizada */
 .foto-perfil {
     width: 300px; 
     border-radius: 10%; 
@@ -34,11 +74,11 @@ body {
 }
 .foto-perfil:hover { transform: scale(1.05); }
 
-/* Botão "Saiba mais sobre mim" */
+/* Estilo dos botões, bem simples pra ficar fácil de clicar */
 .btn {
     display: inline-block;
     padding: 12px 25px;
-    background: #00aaff;
+    background: var(--accent-color);
     color: white !important; /* mater branco mesmo no hover */ 
     text-decoration: none;
     border-radius: 10px;
@@ -47,12 +87,12 @@ body {
     transition: background 0.3s ease, transform 0.2s ease;
 }
 .btn:hover {
-    background: #0077aa;
+    background: var(--accent-hover);
     transform: translateY(-2px);
     color: #fff !important; /* mantém branco mesmo no hover */
 }
 
-/* Projetos centralizados */
+/* Aqui eu organizo os cards dos projetos no meio da página */
 .projetos-container {
     display: flex; 
     justify-content: center; 
@@ -61,7 +101,7 @@ body {
     margin-top: 30px;
 }
 .projeto {
-    background: #fff; 
+    background: var(--card-bg); 
     padding: 20px; 
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -74,7 +114,7 @@ body {
     margin-bottom: 15px;
 }
 
-/* Formulário */
+/* Estilo do formulário de contato */
 form { display: flex; 
     flex-direction: column; 
     gap: 15px; }
@@ -83,14 +123,16 @@ form label {
     text-align: left; }
 form input, form textarea {
     padding: 10px; 
-    border: 1px solid #ccc; 
+    border: 1px solid var(--border-color); 
     border-radius: 6px; 
     font-size: 14px; 
     width: 100%;
+    background: var(--bg-color);
+    color: var(--text-color);
 }
 form button {
     padding: 12px; 
-    background: #00aaff; 
+    background: var(--accent-color); 
     color: #fff; 
     border: none;
     border-radius: 6px; 
@@ -98,23 +140,23 @@ form button {
     cursor: pointer;
 }
 form button:hover {
-    background: #0077aa; 
+    background: var(--accent-hover); 
 }
 
-/* Posiciona os icones do GitHub e do Linkedin na esquerda */
+/* Aqui eu deixo os ícones das redes sociais mais visíveis */
 #social {
     margin-left: auto; 
 }
 #social a {
     padding: 4px;
-    color: #000000;
+    color: var(--accent-color);
     margin-left: 15px;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 #social a:hover {
-    color: #00aaff;
+    color: var(--accent-hover);
 }
 #social {
     margin-left: auto; /* joga para direita */
@@ -122,10 +164,10 @@ form button:hover {
     gap: 15px;
 }
 #social a {
-    color: #0077aa;
+    color: var(--accent-color);
     font-size: 30px;
     transition: color 0.3s ease;
 }
 #social a:hover {
-    color: #0324dfc6;
+    color: var(--accent-hover);
 }
